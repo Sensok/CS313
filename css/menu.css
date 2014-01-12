@@ -1,0 +1,48 @@
+#menu {
+    width: 950px;
+    height: 60px;
+    background: url(../img/menuBarr.gif) no-repeat right 100%;
+    margin: 0 auto;
+    margin-left: 10 auto;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+    text-transform: uppercase;
+}
+
+#menu a {
+    display: block;
+    float: left;
+    padding: 18px 30px 0 30px;
+    text-decoration: none;
+    background: url(../img/divider.gif) no-repeat right 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#menu a:hover {
+    height: 60px;
+    background: url(../img/highlight.gif) repeat-x right 30%;
+    color: #000000;
+}
+
+#menu .current_page {
+    height: 60px;
+    background: url(../img/highlight.gif) repeat-x right 30%;
+    color: #000000;
+}
+
+#menu .current_page_item a {
+    color: #FFFFFF;
+    height: 60px;
+    color: #000000;
+}

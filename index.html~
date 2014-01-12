@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+  <head>
+    <title>Jordan Jensen's Home Page</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+  </head>
+
+
+
+  <body class="background">
+
+    <div id="menu">
+
+      <ul>
+        <li><a class="current_page" href="index.html">Home</a></li>
+        <li><a href="assign/assign02.html">CS 313 Assigments</a></li>
+      </ul>
+    </div>
+
+    <div id="sideBar">
+      <p id="quote">
+        Here is my favorite quote from Epictetus:</p>
+
+      <blockquote cite="http://www.brainyquote.com/quotes/authors/e/epictetus.html">
+        <p><i><b>He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.</b></i></p>
+      </blockquote>
+
+
+    </div>
+    <div id="header">
+      <hr/>
+      <h2>Welcome to Jordan Jensen's Home Page</h2>
+      <p>
+        <strong>Bio</strong><br/>
+        I am a Junior in <i>Computer Science</i> from Boise, ID.<br/>
+        My hobbies include: Dancing, Cooking, and Programming.<br/>
+        Stick around to see what exciting things will develope this<br/>
+        semester.
+      </p>
+      <!-- Horozontal Rule tag -->
+      <img src="img/ieGo.png" alt="Truth of IE" width="400"/>
+      <hr/>
+
+      <hr/>
+
+
+      <div id="table">
+        <table>
+          <caption>My Schedule</caption>
+          <tr>
+            <th>Course Num</th>
+            <th>Course Description</th>
+            <th>Course Section</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Location</th>
+          </tr>
+          <tr>
+            <td>CS 238</td>
+            <td>Discrete Math 2</td>
+            <td>01</td>
+            <td>MWF</td>
+            <td>2:00 p.m. - 3:00 p.m.</td>
+            <td>AUS 210</td>
+          </tr>
+          <tr>
+            <td>CS 470</td>
+            <td>Computer Security</td>
+            <td>01</td>
+            <td>MW</td>
+            <td>3:15 p.m. - 4:45 p.m.</td>
+            <td>AUS 210</td>
+          </tr>
+          <tr>
+            <td>MATH 341</td>
+            <td>Linear Algebra</td>
+            <td>01</td>
+            <td>MWF</td>
+            <td>11:30 a.m. - 12:30 p.m.</td>
+            <td>AUS 208</td>
+          </tr>
+          <tr>
+            <td>CS 313</td>
+            <td>Web Engineering 2</td>
+            <td>01</td>
+            <td>TR</td>
+            <td>9:45 a.m. - 11:15 a.m.</td>
+            <td>AUS 208</td>
+          </tr>
+          <tr>
+            <td>ECEN 324</td>
+            <td>Computer Arch</td>
+            <td>01</td>
+            <td>TR</td>
+            <td>7:45 a.m. - 9:30 a.m.</td>
+            <td>TAY 278</td>
+          </tr>
+          <tr>
+            <td>Math 108T</td>
+            <td>Worst Class on Campus</td>
+            <td>01</td>
+            <td>Online</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+
+        </table>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+#header{
+    padding:12px;
+    width:925px;
+    margin:0 auto;
+    text-align:center;
+    color:#d3d3d3;
+}
+
+.background {
+    background-image: url(../img/paisly.jpeg);
+    background-repeat: no-repeat;
+    padding:20px;
+}
+p {
+    font-family: arial;
+}
+#quote {
+    font-family:tahoma;
+}
+#table {
+    text-align:center;
+}
+
+
+
+
+
