@@ -1,0 +1,57 @@
+<?xml version = "1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <title>PHP Survey</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+  </head>
+
+ <body class="background">
+
+   <div id="menu">
+     <ul>
+       <li><a href="../../index.html">Home</a></li>
+       <li><a href="../assign02.html">CS 313 Assigments</a></li>
+       <li><a href="../../schedule.html">My Schedule</a></li>
+     </ul>
+   </div>
+
+   <div id="header">
+
+     <hr/>
+
+     <h2>PHP Survey</h2>
+     <p style="font-family:arial;">
+     </p>
+     <a href="survey.php">See Current Results</a>
+     <br/>
+     <br/>
+
+     <form action="survey.php" method="post">
+       Do you know how to rollerskate?
+       <input type="radio" name="roll" value="yes">Yes
+       <input type="radio" name="roll" value="No">No<br/>
+       Do you like sushi?
+       <input type="radio" name="sushi" value="yes">Yes
+       <input type="radio" name="sushi" value="No">No<br/>
+       Do you like JavaScript?
+       <input type="radio" name="js" value="yes">Yes
+       <input type="radio" name="js" value="No">No<br/>
+       Do you like PHP?
+       <input type="radio" name="php" value="yes">Yes
+       <input type="radio" name="php" value="No">No<br/>
+       <input type="submit" value="Submit Poll">
+     </form>
+     <hr/>
+
+   </div>
+
+
+ </body>
+</html>
