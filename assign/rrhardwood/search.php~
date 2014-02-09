@@ -1,0 +1,65 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+echo 'I am a live';xs
+  //Database Queries File
+$database = 'RRHARDWOOD';
+$db_username = 'root';
+$db_password = 'K00ndamrei';
+$server = 'localhost';
+$dsn = "mysql:host=$server;dbname=$database";
+try {
+   $db = new PDO($dsn, $db_username, $db_password);
+}
+catch (PDOException $e) {
+   $error_message = $e->getMessage();
+}
+   echo 'POOP';
+function getProducts() {
+   global $db;
+   global $database;
+
+   $sql = "SELECT * FROM product";
+   try {
+      $stmt = $db->prepare($sql);
+      $stmt->execute();
+      $result = $stmt->fetchAll();
+      $stmt->closeCursor();
+      return $result;
+   }
+   catch (PDOException $exc) {
+      return '0';
+   }
+}
+
+$products = getProducts();
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+   <title>Scriptures</title>
+   </head>
+
+   <body>
+   <table>
+   <tr>
+   <th>Width</th>
+   <th>Grade</th>
+   <th>Species</th>
+   <th>Mill</th>
+   <th>Base Price</th>
+   <th>Sqft On Hand</th>
+   <th>Sqft committed</th>
+   </tr>
+   <?php
+   foreach ($products as $prod){
+   echo '<tr><td>' . $prod['width'] . '</td><td>' . $prod['grade_id']
+   . '</td><td>' . $prod['species_id'] . '</td><td>' . $prod['mill']
+   .  '</td><td>' . $prod['base_price'] . '</td><td>' . $prod['sq_ft']
+   .  '</td><td>' . $prod['committed'] . '</td></tr>';
+}
+   </table>
+?>
+</body>
+</html>
