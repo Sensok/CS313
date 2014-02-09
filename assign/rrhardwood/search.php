@@ -16,14 +16,32 @@ catch (PDOException $e) {
 $species = $_GET['species'];
 $width = $_GET['width'];
 
-function getProducts() {
+
+
+function getWidths(){
    global $db;
    global $database;
 
-   $sql ="select * from product as p "
-      . "join grades as g on p.grade_id = g.id "
-      . "join species as s on p.species_id = s.species_id "
-      . "join mill as m on p.mill = m.mill_id";
+   $sql ="select mWidth, id from widths";
+
+   try {
+      $stmt = $db->prepare($sql);
+      $stmt->execute();
+      $result = $stmt->fetchAll();
+      $stmt->closeCursor();
+      return $result;
+   }
+   catch (PDOException $exc) {
+      return '0';
+   }
+}
+
+
+function getSpecies() {
+   global $db;
+   global $database;
+
+   $sql ="select spec_ldec, species_id from species";
 
    try {
       $stmt = $db->prepare($sql);
@@ -45,8 +63,8 @@ function filter($width, $species) {
       . "join grades as g on p.grade_id = g.id "
       . "join species as s on p.species_id = s.species_id "
       . "join mill as m on p.mill = m.mill_id "
-      . "WHERE width = " . $width . " and p.species_id = " . $species;
-
+      . "join widths as w on p.width = w.id "
+      . "WHERE w.id = " . $width . " and p.species_id = " . $species;
    try {
       $stmt = $db->prepare($sql);
       $stmt->execute();
@@ -61,7 +79,8 @@ function filter($width, $species) {
 
 
 
-$products = getProducts();
+$products = getSpecies();
+$widths = getWidths();
 if (isset($species) && isset($width)) {
    $filtered = filter($width, $species);
 }
@@ -84,8 +103,8 @@ if (isset($species) && isset($width)) {
       </select>
       <select name="width">
       <?php
-   foreach ($products as $w) {
-   echo '<option value="' . $w['width'] . '">' . $w['width'] . '</option>';
+   foreach ($widths as $w) {
+   echo '<option value="' . $w['id'] . '">' . $w['mWidth'] . '</option>';
       }
       ?>
       </select>
@@ -93,7 +112,7 @@ if (isset($species) && isset($width)) {
       </form>
    <table>
    <tr>
-   <th>Width</th>
+   <th>Width (in)</th>
    <th>Grade</th>
    <th>Species</th>
    <th>Mill</th>
@@ -103,7 +122,7 @@ if (isset($species) && isset($width)) {
    </tr>
    <?php
    foreach ($filtered as $prod){
-   echo '<tr><td>' . $prod['width'] . '</td><td>' . $prod['grade']
+   echo '<tr><td>' . $prod['mWidth'] . '</td><td>' . $prod['grade']
    . '</td><td>' . $prod['spec_ldec'] . '</td><td>' . $prod['short_desc']
    .  '</td><td>' . $prod['base_price'] . '</td><td>' . $prod['sq_ft']
    .  '</td><td>' . $prod['committed'] . '</td></tr>';
