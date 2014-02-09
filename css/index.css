@@ -31,6 +31,21 @@ p {
     color: #d3d3d3;
 }
 
-
-
+#calendar{
+    margin: 0 auto;
+    padding-top:30px;
+    padding-left:250px;
+}
+a:link{
+    COLOR: #00FF00;
+}
+a:visited {
+    COLOR: #F08080;
+}
+a:hover {
+    COLOR: #d3d3d3;
+}
+a:active {
+    COLOR: #00FF00;
+}
 
